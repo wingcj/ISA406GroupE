@@ -69,6 +69,8 @@
     </div>
   </header><!-- End Header -->
 
+
+
   <main id="main">
 
     <!-- ======= Contact Section ======= -->
@@ -85,6 +87,87 @@
 
       </div>
     </section><!-- End Contact Section -->
+	
+		<div class="col-m-6" align="center">
+		<form style="display: inline-block;" id ="test-form" action = "https://docs.google.com/forms/u/1/d/e/1FAIpQLScmy_f8P00N80cw2ImlSrTmsMwlSPpZ6iZAJ5YiX70zM_klPw/formResponse"
+		target="_self" method="POST" class="main-form needs-validation" novalidate>
+			<div class="row">
+				<div class="col">
+					<div class="form-group">
+						<label for="fname">First name:</label><br>
+						<input type="text" id="fname" name="entry.1806478498" placeholder="First name" class="form-control" required>
+						<div class="invalid-feedback">This field is required</div>
+					</div>
+				</div>
+ 
+			<div class="col">
+				<div class="form-group">
+						<label for="lname">Last name:</label><br>
+						<input type="text" id="lname" name="entry.1603232607" placeholder="Last name" class="form-control" required>
+						<div class="invalid-feedback">This field is required</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col">
+					<div class="form-group">
+						<label for="pnumber"> Phone number:</label><br>
+						<input type="tel" id="pnumber" name="entry.988415417" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="Phone number" class="form-control" required >
+						<small id="pnumberHelp" class="form-text text-muted">Please use the form: 555-123-1234</small>
+						<div class="invalid-feedback">This field must be a 10 digit phone number that includes '-'.</div>
+					</div>
+				</div>
+
+				<div class="col">
+					<div class="form-group">
+						<label for="email">Email Address:</label><br>
+						<input type="text" id="email" name="entry.2031170636" placeholder="Enter email" class="form-control" required>
+						<div class="invalid-feedback">This field is required</div>
+					</div>
+				</div>
+			</div>
+ 
+			<div>
+				<label for="games">Games you are interested in:</label><br>
+				<textarea rows="5" cols="50" id="games" name="entry.1875857954" placeholder="List the games here" class="form-control" required></textarea>
+				<div class="invalid-feedback">This field is required</div>
+			</div>
+ 
+			<div class="row">
+				<div class="col">
+					<div class="form-group">
+						<label for="act">ACT Score:</label><br>
+						<input type="number" id="act" name="entry.1773384798" placeholder="ACT Score" class="form-control" min="0" max="36">
+						<div class="invalid-feedback">Make sure your score is inbetween 0 and 36</div>
+					</div>
+				</div>
+
+				<div class= "col">
+					<div class="form-group">
+						<label for="sat">SAT Score:</label><br>
+						<input type="number" id="sat" name="entry.1683712827" placeholder="SAT score" class="form-control" min="0" max="1600">
+						<div class="invalid-feedback">Make sure your score is inbetween 0 and 1600</div>
+					</div>
+				</div>
+
+				<div class="col">
+					<div class="form-group">
+						<label for="cpa">GPA:</label><br>
+						<input type="text" id="gpa" name="entry.1295942063" placeholder="GPA" class="form-control" required>
+						<div class="invalid-feedback">This field is required</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-2">
+					<button type="submit"id="submit-form" class="btn btn-primary">Submit</button>
+				</div>
+			</div>
+ 
+		</form>
+	</div>
 
     <!-- ======= Contact Section ======= -->
     <section class="contact" data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="500">
@@ -250,6 +333,23 @@
   </footer><!-- End Footer -->
 
   <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
+
+<script>
+	var form = document.querySelector('.needs-validation');
+
+		form.addEventListener('submit', function(event) {
+			if (form.checkValidity() === false) {
+			event.preventDefault();
+			event.stopPropagation();
+			}
+	form.classList.add('was-validated');
+})
+</script>
+
+	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
   <!-- Vendor JS Files -->
   <script src="assets/vendor/jquery/jquery.min.js"></script>
